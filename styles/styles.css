@@ -1,0 +1,77 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0;
+  padding: 1rem 0;
+  font-family: 'Space Mono', monospace;
+  background-color: #c5e4e7;
+}
+
+header h1 {
+  padding: 1.5rem;
+  font-size: 2.4rem;
+  letter-spacing: 1rem;
+  color: #00494d;
+  text-align: center;
+}
+
+main {
+  background-color: white;
+  border-radius: 3rem;
+  padding: 3.3rem;
+}
+
+main .bill__label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00494d;
+}
+
+main .bill__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  background-color: #f4fafa;
+}
+
+main .bill__info .bill__unit {
+  color: #7f9c9f;
+  font-size: 2.3rem;
+}
+
+main .bill__info .bill__number {
+  color: #00494d;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+footer.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+footer.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=styles.css.map */

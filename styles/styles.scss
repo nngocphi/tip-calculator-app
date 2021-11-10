@@ -1,0 +1,57 @@
+@import 'variables';
+@import 'general';
+
+header {
+	h1 {
+		padding: 1.5rem;
+		font-size: 2.4rem;
+		letter-spacing: 1rem;
+		color: $very-dark-cyan;
+		text-align: center;
+	}
+}
+
+main {
+	background-color: $white;
+	border-radius: 3rem;
+	padding: 3.3rem;
+
+	.bill {
+		&__label {
+			font-size: 1.6rem;
+			font-weight: 700;
+			color: $very-dark-cyan;
+		}
+
+		&__info {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 0.5rem;
+			padding: 0.7rem 1.6rem;
+			background-color: $lighter-grayish-cyan;
+
+			.bill__unit {
+				color: $dark-grayish-cyan;
+				font-size: 2.3rem;
+			}
+
+			.bill__number {
+				color: $very-dark-cyan;
+				font-size: 2.4rem;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+footer {
+	&.attribution {
+		font-size: 11px;
+		text-align: center;
+
+		a {
+			color: hsl(228, 45%, 44%);
+		}
+	}
+}

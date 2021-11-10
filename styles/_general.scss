@@ -1,0 +1,19 @@
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0;
+	padding: 1rem 0;
+	font-family: 'Space Mono', monospace;
+	background-color: $light-grayish-cyan;
+}
