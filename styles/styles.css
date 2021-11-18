@@ -13,65 +13,311 @@ html {
 
 body {
   width: 100%;
-  max-width: 1200px;
-  margin: 0;
-  padding: 1rem 0;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
   font-family: 'Space Mono', monospace;
   background-color: #c5e4e7;
 }
 
-header h1 {
-  padding: 1.5rem;
+main .count .bill .label, main .count .tip-percent .label, main .count .people-num .label {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #5e7a7d;
+}
+
+main .count .bill .input-container, main .count .people-num .input-container {
+  position: relative;
+  margin-top: 0.6rem;
+}
+
+main .count .bill .input-container .input__icon, main .count .people-num .input-container .input__icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 1.5rem;
+}
+
+main .count .bill .input-container .input__icon svg, main .count .people-num .input-container .input__icon svg {
+  vertical-align: middle;
+}
+
+main .count .bill .input-container .input, main .count .people-num .input-container .input {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  font-family: inherit;
   font-size: 2.4rem;
-  letter-spacing: 1rem;
+  font-weight: 700;
   color: #00494d;
+  text-align: right;
+  background-color: #f4fafa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main .count .bill .input-container .input:focus, main .count .people-num .input-container .input:focus {
+  outline-color: #26c0ab;
+}
+
+main .count .bill .input-container .input::-webkit-input-placeholder, main .count .people-num .input-container .input::-webkit-input-placeholder {
+  color: #7f9c9f;
+}
+
+main .count .bill .input-container .input:-ms-input-placeholder, main .count .people-num .input-container .input:-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+main .count .bill .input-container .input::-ms-input-placeholder, main .count .people-num .input-container .input::-ms-input-placeholder {
+  color: #7f9c9f;
+}
+
+main .count .bill .input-container .input::placeholder, main .count .people-num .input-container .input::placeholder {
+  color: #7f9c9f;
+}
+
+main .count .tip-percent .percent-container .btn, main .total-container .reset {
+  font-family: inherit;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+main .count .tip-percent .percent-container .active.btn, main .total-container .active.reset {
+  color: #00494d;
+  background-color: #26c0ab;
+}
+
+main .count .tip-percent .percent-container .btn:hover, main .total-container .reset:hover {
+  color: #00494d;
+  background-color: #a1e8e0;
+}
+
+main .count .tip-percent .percent-container .btn:disabled, main .total-container .reset:disabled {
+  color: #065d64;
+  background-color: #0d686d;
+  cursor: default;
+}
+
+main .total-container .tip-amount, main .total-container .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 0 2rem;
+}
+
+main .total-container .tip-amount__label, main .total-container .total__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .total-container .tip-amount__label__title, main .total-container .total__label__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #f4fafa;
+}
+
+main .total-container .tip-amount__label__subtitle, main .total-container .total__label__subtitle {
+  margin-top: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #7f9c9f;
+}
+
+main .total-container .tip-amount__price, main .total-container .total__price {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #26c0ab;
+}
+
+header .logo {
+  margin: 4rem 0 3.5rem;
   text-align: center;
 }
 
 main {
-  background-color: white;
-  border-radius: 3rem;
-  padding: 3.3rem;
-}
-
-main .bill__label {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #00494d;
-}
-
-main .bill__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 0.5rem;
-  padding: 0.7rem 1.6rem;
-  background-color: #f4fafa;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 95%;
+  margin: 0 auto;
+  gap: 3rem;
+  padding: 2.5rem;
+  background-color: white;
+  border-radius: 2.5rem;
+  -webkit-box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 100px 100px 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-main .bill__info .bill__unit {
-  color: #7f9c9f;
-  font-size: 2.3rem;
+main .count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
 }
 
-main .bill__info .bill__number {
-  color: #00494d;
+main .count .tip-percent {
+  max-width: 100%;
+}
+
+main .count .tip-percent .percent-container {
+  margin-top: 1.7rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 4.8rem;
+  gap: 1.6rem;
+}
+
+main .count .tip-percent .percent-container .btn {
+  text-align: center;
+  color: #f4fafa;
+  background-color: #00494d;
+}
+
+main .count .tip-percent .percent-container .tip-input {
+  width: 100%;
+  padding: 0 1.5rem;
+  font-family: inherit;
   font-size: 2.4rem;
   font-weight: 700;
+  text-align: right;
+  color: #00494d;
+  background-color: #f4fafa;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main .count .tip-percent .percent-container .tip-input::-webkit-input-placeholder {
+  color: #5e7a7d;
+}
+
+main .count .tip-percent .percent-container .tip-input:-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+main .count .tip-percent .percent-container .tip-input::-ms-input-placeholder {
+  color: #5e7a7d;
+}
+
+main .count .tip-percent .percent-container .tip-input::placeholder {
+  color: #5e7a7d;
+}
+
+main .count .tip-percent .percent-container .tip-input:focus {
+  outline-color: #26c0ab;
+}
+
+main .total-container {
+  padding: 2.2rem;
+  background-color: #00494d;
+  border-radius: 1.5rem;
+}
+
+main .total-container .reset {
+  width: 100%;
+  margin-top: 1.3rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #00494d;
+  background-color: #26c0ab;
 }
 
 footer.attribution {
-  font-size: 11px;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #7f9c9f;
   text-align: center;
 }
 
 footer.attribution a {
-  color: #3e52a3;
+  color: #5e7a7d;
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    padding: 5rem;
+    gap: 5rem;
+  }
+  main .count {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    gap: 4.5rem;
+  }
+  main .count .tip-percent .percent-container {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  main .total-container {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin: -1.5rem -1.5rem -1.5rem -0.5rem;
+    padding: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .total-container .tip-amount {
+    margin: 0 0 2rem;
+  }
+  main .total-container .tip-amount__label__subtitle {
+    font-size: 1.4rem;
+  }
+  main .total-container .tip-amount__price {
+    font-size: 5rem;
+  }
+  main .total-container .total {
+    margin: 2rem 0 0;
+  }
+  main .total-container .total__label__subtitle {
+    font-size: 1.4rem;
+  }
+  main .total-container .total__price {
+    font-size: 5rem;
+  }
+  footer.attribution {
+    margin: 3rem 0;
+    font-size: 1.4rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

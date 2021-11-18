@@ -1,0 +1,63 @@
+@media screen and (min-width: 1440px) {
+	main {
+		flex-direction: row;
+		width: 100%;
+		padding: 5rem;
+		gap: 5rem;
+
+		.count {
+			flex-basis: 50%;
+			gap: 4.5rem;
+
+			.tip-percent {
+				.percent-container {
+					grid-template-columns: 1fr 1fr 1fr;
+				}
+			}
+		}
+
+		.total-container {
+			flex-basis: 50%;
+			margin: -1.5rem -1.5rem -1.5rem -0.5rem;
+			padding: 4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			.tip-amount {
+				margin: 0 0 2rem;
+
+				&__label {
+					&__subtitle {
+						font-size: 1.4rem;
+					}
+				}
+
+				&__price {
+					font-size: 5rem;
+				}
+			}
+
+			.total {
+				margin: 2rem 0 0;
+
+				&__label {
+					&__subtitle {
+						font-size: 1.4rem;
+					}
+				}
+
+				&__price {
+					font-size: 5rem;
+				}
+			}
+		}
+	}
+
+	footer {
+		&.attribution {
+			margin: 3rem 0;
+			font-size: 1.4rem;
+		}
+	}
+}

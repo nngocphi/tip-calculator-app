@@ -1,0 +1,176 @@
+header {
+	.logo {
+		margin: 4rem 0 3.5rem;
+		text-align: center;
+	}
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	margin: 0 auto;
+	gap: 3rem;
+	padding: 2.5rem;
+	background-color: $white;
+	border-radius: 2.5rem;
+	box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+		100px 100px 80px rgba(0, 0, 0, 0.07);
+
+	.count {
+		display: flex;
+		flex-direction: column;
+		gap: 3rem;
+
+		.bill {
+			.label {
+				@extend %label;
+			}
+
+			.input-container {
+				@extend %input-container;
+
+				.input__icon {
+					@extend %input__icon;
+				}
+
+				.input {
+					@extend %input;
+				}
+			}
+		}
+
+		.tip-percent {
+			max-width: 100%;
+
+			.label {
+				@extend %label;
+			}
+
+			.percent-container {
+				margin-top: 1.7rem;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-auto-rows: 4.8rem;
+				gap: 1.6rem;
+
+				.btn {
+					@extend %btn;
+					text-align: center;
+					color: $lighter-grayish-cyan;
+					background-color: $very-dark-cyan;
+				}
+
+				.tip-input {
+					width: 100%;
+					padding: 0 1.5rem;
+					font-family: inherit;
+					font-size: 2.4rem;
+					font-weight: 700;
+					text-align: right;
+					color: $very-dark-cyan;
+					background-color: $lighter-grayish-cyan;
+					border: none;
+					border-radius: 5px;
+					cursor: pointer;
+
+					&::placeholder {
+						color: $darker-grayish-cyan;
+					}
+
+					&:focus {
+						outline-color: $strong-cyan;
+					}
+				}
+			}
+		}
+
+		.people-num {
+			.label {
+				@extend %label;
+			}
+
+			.input-container {
+				@extend %input-container;
+
+				.input__icon {
+					@extend %input__icon;
+				}
+
+				.input {
+					@extend %input;
+				}
+			}
+		}
+	}
+
+	.total-container {
+		padding: 2.2rem;
+		background-color: $very-dark-cyan;
+		border-radius: 1.5rem;
+
+		.tip-amount {
+			@extend %price-section;
+
+			&__label {
+				@extend %price-section__label;
+
+				&__title {
+					@extend %price-section__title;
+				}
+
+				&__subtitle {
+					@extend %price-section__subtitle;
+				}
+			}
+
+			&__price {
+				@extend %price-section__price;
+			}
+		}
+
+		.total {
+			@extend %price-section;
+
+			&__label {
+				@extend %price-section__label;
+
+				&__title {
+					@extend %price-section__title;
+				}
+
+				&__subtitle {
+					@extend %price-section__subtitle;
+				}
+			}
+
+			&__price {
+				@extend %price-section__price;
+			}
+		}
+
+		.reset {
+			@extend %btn;
+			width: 100%;
+			margin-top: 1.3rem;
+			padding: 1rem;
+			font-size: 2rem;
+			color: $very-dark-cyan;
+			background-color: $strong-cyan;
+		}
+	}
+}
+
+footer {
+	&.attribution {
+		margin: 1.5rem 0;
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: $dark-grayish-cyan;
+		text-align: center;
+
+		a {
+			color: $darker-grayish-cyan;
+		}
+	}
+}
