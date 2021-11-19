@@ -5,18 +5,18 @@
 		padding: 5rem;
 		gap: 5rem;
 
-		.count {
+		.input {
 			flex-basis: 50%;
 			gap: 4.5rem;
 
-			.tip-percent {
-				.percent-container {
+			.tip {
+				&__btn-container {
 					grid-template-columns: 1fr 1fr 1fr;
 				}
 			}
 		}
 
-		.total-container {
+		.output {
 			flex-basis: 50%;
 			margin: -1.5rem -1.5rem -1.5rem -0.5rem;
 			padding: 4rem;
@@ -24,40 +24,22 @@
 			flex-direction: column;
 			justify-content: space-between;
 
-			.tip-amount {
+			&__line {
 				margin: 0 0 2rem;
-
-				&__label {
-					&__subtitle {
-						font-size: 1.4rem;
-					}
-				}
-
-				&__price {
-					font-size: 5rem;
-				}
 			}
 
-			.total {
-				margin: 2rem 0 0;
+			&__subtitle {
+				font-size: 1.4rem;
+			}
 
-				&__label {
-					&__subtitle {
-						font-size: 1.4rem;
-					}
-				}
-
-				&__price {
-					font-size: 5rem;
-				}
+			&__value {
+				font-size: 5rem;
 			}
 		}
 	}
 
 	footer {
-		&.attribution {
-			margin: 3rem 0;
-			font-size: 1.4rem;
-		}
+		margin: 3rem 0;
+		font-size: 1.4rem;
 	}
 }

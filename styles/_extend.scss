@@ -1,3 +1,4 @@
+// Input
 %label {
 	font-size: 1.6rem;
 	font-weight: 700;
@@ -14,10 +15,6 @@
 	top: 50%;
 	transform: translateY(-50%);
 	left: 1.5rem;
-
-	svg {
-		vertical-align: middle;
-	}
 }
 
 %input {
@@ -30,71 +27,61 @@
 	text-align: right;
 	background-color: $lighter-grayish-cyan;
 	border: none;
-	border-radius: 5px;
+	border-radius: 0.5rem;
 	cursor: pointer;
+
+	&:focus {
+		outline-color: $strong-cyan;
+	}
+
+	&::placeholder {
+		color: $dark-grayish-cyan;
+	}
 }
 
-%input:focus {
-	outline-color: $strong-cyan;
-}
-
-%input::placeholder {
-	color: $dark-grayish-cyan;
-}
-
+// Button
 %btn {
 	font-family: inherit;
-	font-size: 2.4rem;
 	font-weight: 700;
 	text-align: center;
 	border: none;
-	border-radius: 5px;
+	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: 0.2s ease-in-out;
-
-	&.active {
-		color: $very-dark-cyan;
-		background-color: $strong-cyan;
-	}
 
 	&:hover {
 		color: $very-dark-cyan;
 		background-color: $hover-btn;
 	}
-
-	&:disabled {
-		color: #065d64;
-		background-color: #0d686d;
-		cursor: default;
-	}
 }
 
-%price-section {
+// Output
+%output__line {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin: 1.5rem 0 2rem;
 }
 
-%price-section__label {
+%output__label {
 	display: flex;
 	flex-direction: column;
 }
 
-%price-section__title {
+%output__title {
 	font-size: 1.6rem;
 	font-weight: 700;
 	color: $lighter-grayish-cyan;
 }
 
-%price-section__subtitle {
+%output__subtitle {
 	margin-top: 0.3rem;
 	font-size: 1.3rem;
 	font-weight: 700;
 	color: $dark-grayish-cyan;
 }
 
-%price-section__price {
+%output__value {
 	font-size: 3.2rem;
 	font-weight: 700;
 	color: $strong-cyan;

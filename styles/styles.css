@@ -12,6 +12,19 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
@@ -20,18 +33,22 @@ body {
   background-color: #c5e4e7;
 }
 
-main .count .bill .label, main .count .tip-percent .label, main .count .people-num .label {
+main .input .bill label,
+main .input .tip label,
+main .input .people label {
   font-size: 1.6rem;
   font-weight: 700;
   color: #5e7a7d;
 }
 
-main .count .bill .input-container, main .count .people-num .input-container {
+main .input .bill__input-container,
+main .input .people__input-container {
   position: relative;
   margin-top: 0.6rem;
 }
 
-main .count .bill .input-container .input__icon, main .count .people-num .input-container .input__icon {
+main .input .bill__icon,
+main .input .people__icon {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -39,11 +56,9 @@ main .count .bill .input-container .input__icon, main .count .people-num .input-
   left: 1.5rem;
 }
 
-main .count .bill .input-container .input__icon svg, main .count .people-num .input-container .input__icon svg {
-  vertical-align: middle;
-}
-
-main .count .bill .input-container .input, main .count .people-num .input-container .input {
+main .input .bill__input,
+main .input .tip__input,
+main .input .people__input {
   width: 100%;
   padding: 0.5rem 1.5rem;
   font-family: inherit;
@@ -53,59 +68,57 @@ main .count .bill .input-container .input, main .count .people-num .input-contai
   text-align: right;
   background-color: #f4fafa;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   cursor: pointer;
 }
 
-main .count .bill .input-container .input:focus, main .count .people-num .input-container .input:focus {
+main .input .bill__input:focus,
+main .input .tip__input:focus,
+main .input .people__input:focus {
   outline-color: #26c0ab;
 }
 
-main .count .bill .input-container .input::-webkit-input-placeholder, main .count .people-num .input-container .input::-webkit-input-placeholder {
+main .input .bill__input::-webkit-input-placeholder,
+main .input .tip__input::-webkit-input-placeholder,
+main .input .people__input::-webkit-input-placeholder {
   color: #7f9c9f;
 }
 
-main .count .bill .input-container .input:-ms-input-placeholder, main .count .people-num .input-container .input:-ms-input-placeholder {
+main .input .bill__input:-ms-input-placeholder,
+main .input .tip__input:-ms-input-placeholder,
+main .input .people__input:-ms-input-placeholder {
   color: #7f9c9f;
 }
 
-main .count .bill .input-container .input::-ms-input-placeholder, main .count .people-num .input-container .input::-ms-input-placeholder {
+main .input .bill__input::-ms-input-placeholder,
+main .input .tip__input::-ms-input-placeholder,
+main .input .people__input::-ms-input-placeholder {
   color: #7f9c9f;
 }
 
-main .count .bill .input-container .input::placeholder, main .count .people-num .input-container .input::placeholder {
+main .input .bill__input::placeholder,
+main .input .tip__input::placeholder,
+main .input .people__input::placeholder {
   color: #7f9c9f;
 }
 
-main .count .tip-percent .percent-container .btn, main .total-container .reset {
+main .input .tip .btn, main .output .btn--reset {
   font-family: inherit;
-  font-size: 2.4rem;
   font-weight: 700;
   text-align: center;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   cursor: pointer;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
 
-main .count .tip-percent .percent-container .active.btn, main .total-container .active.reset {
-  color: #00494d;
-  background-color: #26c0ab;
-}
-
-main .count .tip-percent .percent-container .btn:hover, main .total-container .reset:hover {
+main .input .tip .btn:hover, main .output .btn--reset:hover {
   color: #00494d;
   background-color: #a1e8e0;
 }
 
-main .count .tip-percent .percent-container .btn:disabled, main .total-container .reset:disabled {
-  color: #065d64;
-  background-color: #0d686d;
-  cursor: default;
-}
-
-main .total-container .tip-amount, main .total-container .total {
+main .output__line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,7 +131,7 @@ main .total-container .tip-amount, main .total-container .total {
   margin: 1.5rem 0 2rem;
 }
 
-main .total-container .tip-amount__label, main .total-container .total__label {
+main .output__label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,28 +141,27 @@ main .total-container .tip-amount__label, main .total-container .total__label {
           flex-direction: column;
 }
 
-main .total-container .tip-amount__label__title, main .total-container .total__label__title {
+main .output__title {
   font-size: 1.6rem;
   font-weight: 700;
   color: #f4fafa;
 }
 
-main .total-container .tip-amount__label__subtitle, main .total-container .total__label__subtitle {
+main .output__subtitle {
   margin-top: 0.3rem;
   font-size: 1.3rem;
   font-weight: 700;
   color: #7f9c9f;
 }
 
-main .total-container .tip-amount__price, main .total-container .total__price {
+main .output__value {
   font-size: 3.2rem;
   font-weight: 700;
   color: #26c0ab;
 }
 
 header .logo {
-  margin: 4rem 0 3.5rem;
-  text-align: center;
+  margin: 5rem 0 3.5rem;
 }
 
 main {
@@ -160,8 +172,13 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 95%;
-  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   gap: 3rem;
   padding: 2.5rem;
   background-color: white;
@@ -170,7 +187,7 @@ main {
           box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 
-main .count {
+main .input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,13 +196,10 @@ main .count {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 3rem;
+  width: 100%;
 }
 
-main .count .tip-percent {
-  max-width: 100%;
-}
-
-main .count .tip-percent .percent-container {
+main .input .tip__btn-container {
   margin-top: 1.7rem;
   display: -ms-grid;
   display: grid;
@@ -195,53 +209,43 @@ main .count .tip-percent .percent-container {
   gap: 1.6rem;
 }
 
-main .count .tip-percent .percent-container .btn {
-  text-align: center;
+main .input .tip .btn {
+  font-size: 2.4rem;
   color: #f4fafa;
   background-color: #00494d;
 }
 
-main .count .tip-percent .percent-container .tip-input {
-  width: 100%;
-  padding: 0 1.5rem;
-  font-family: inherit;
-  font-size: 2.4rem;
-  font-weight: 700;
-  text-align: right;
+main .input .tip .btn.active {
   color: #00494d;
-  background-color: #f4fafa;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  background-color: #26c0ab;
 }
 
-main .count .tip-percent .percent-container .tip-input::-webkit-input-placeholder {
-  color: #5e7a7d;
+main .input .people__label-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-main .count .tip-percent .percent-container .tip-input:-ms-input-placeholder {
-  color: #5e7a7d;
+main .input .people__label-container .error-msg {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: indianred;
 }
 
-main .count .tip-percent .percent-container .tip-input::-ms-input-placeholder {
-  color: #5e7a7d;
-}
-
-main .count .tip-percent .percent-container .tip-input::placeholder {
-  color: #5e7a7d;
-}
-
-main .count .tip-percent .percent-container .tip-input:focus {
-  outline-color: #26c0ab;
-}
-
-main .total-container {
+main .output {
+  width: 100%;
   padding: 2.2rem;
   background-color: #00494d;
   border-radius: 1.5rem;
 }
 
-main .total-container .reset {
+main .output .btn--reset {
   width: 100%;
   margin-top: 1.3rem;
   padding: 1rem;
@@ -250,7 +254,13 @@ main .total-container .reset {
   background-color: #26c0ab;
 }
 
-footer.attribution {
+main .output .btn--reset:disabled {
+  color: #065d64;
+  background-color: #0d686d;
+  cursor: default;
+}
+
+footer {
   margin: 1.5rem 0;
   font-size: 1.1rem;
   font-weight: 700;
@@ -258,7 +268,7 @@ footer.attribution {
   text-align: center;
 }
 
-footer.attribution a {
+footer a {
   color: #5e7a7d;
 }
 
@@ -272,16 +282,16 @@ footer.attribution a {
     padding: 5rem;
     gap: 5rem;
   }
-  main .count {
+  main .input {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     gap: 4.5rem;
   }
-  main .count .tip-percent .percent-container {
+  main .input .tip__btn-container {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
   }
-  main .total-container {
+  main .output {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     margin: -1.5rem -1.5rem -1.5rem -0.5rem;
@@ -297,25 +307,16 @@ footer.attribution a {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  main .total-container .tip-amount {
+  main .output__line {
     margin: 0 0 2rem;
   }
-  main .total-container .tip-amount__label__subtitle {
+  main .output__subtitle {
     font-size: 1.4rem;
   }
-  main .total-container .tip-amount__price {
+  main .output__value {
     font-size: 5rem;
   }
-  main .total-container .total {
-    margin: 2rem 0 0;
-  }
-  main .total-container .total__label__subtitle {
-    font-size: 1.4rem;
-  }
-  main .total-container .total__price {
-    font-size: 5rem;
-  }
-  footer.attribution {
+  footer {
     margin: 3rem 0;
     font-size: 1.4rem;
   }
