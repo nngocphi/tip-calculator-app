@@ -17,7 +17,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ## Overview
 
-    This is my second challenge on Frontend Mentor. This challenge requires me to build a Tip Calculator App that can calculate tip and total cost of bill person.
+This is my second challenge on Frontend Mentor. This challenge requires me to build a Tip Calculator App that can calculate tip and total cost of bill person.
 
 ### The challenge
 
@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: (https://your-solution-url.com)
+-   Solution URL: (https://www.frontendmentor.io/solutions/tip-calculator-app-zFaz8pCvb)
 -   Live Site URL: (https://nngocphi.github.io/tip-calculator-app/)
 
 ## My process
@@ -76,27 +76,27 @@ Users should be able to:
 
 ```sass
 .bill,
-		.tip,
-		.people {
-			label {
-				@extend %label;
-			}
+.tip,
+.people {
+	label {
+		@extend %label;
+	}
 
-			&__input {
-				@extend %input;
-			}
+	&__input {
+	  @extend %input;
 		}
+	}
 
-		.bill,
-		.people {
-			&__input-container {
-				@extend %input-container;
-			}
+.bill,
+.people {
+  &__input-container {
+    @extend %input-container;
+  }
 
-			&__icon {
-				@extend %input__icon;
-			}
-		}
+  &__icon {
+    @extend %input__icon;
+  }
+}
 ```
 
 ```js
