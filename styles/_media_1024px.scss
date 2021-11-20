@@ -1,13 +1,13 @@
 @media screen and (min-width: 1024px) {
 	main {
 		flex-direction: row;
-		width: 100%;
-		padding: 5rem;
+		align-items: stretch;
 		gap: 5rem;
+		padding: 5rem;
 
 		.input {
 			flex-basis: 50%;
-			gap: 4.5rem;
+			gap: 5rem;
 
 			.tip {
 				&__btn-container {
@@ -18,7 +18,7 @@
 
 		.output {
 			flex-basis: 50%;
-			margin: -1.5rem -1.5rem -1.5rem -0.5rem;
+			margin: -1.5rem -1.5rem -1.5rem 0;
 			padding: 4rem;
 			display: flex;
 			flex-direction: column;

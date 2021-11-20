@@ -128,10 +128,10 @@ main .output__line {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1.5rem 0 2rem;
+  margin: 1.5rem 0 2.5rem;
 }
 
-main .output__label {
+main .output__title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,15 +147,14 @@ main .output__title {
   color: #f4fafa;
 }
 
-main .output__subtitle {
-  margin-top: 0.3rem;
+main .output__desc {
   font-size: 1.3rem;
   font-weight: 700;
   color: #7f9c9f;
 }
 
 main .output__value {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #26c0ab;
 }
@@ -236,6 +235,13 @@ main .input .people__label-container .error-msg {
   font-size: 1.6rem;
   font-weight: 700;
   color: indianred;
+  opacity: 0;
+}
+
+main .input .people__label-container .show-error-msg {
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
 }
 
 main .output {
@@ -250,6 +256,7 @@ main .output .btn--reset {
   margin-top: 1.3rem;
   padding: 1rem;
   font-size: 2rem;
+  text-transform: uppercase;
   color: #00494d;
   background-color: #26c0ab;
 }
@@ -278,14 +285,16 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 100%;
-    padding: 5rem;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     gap: 5rem;
+    padding: 5rem;
   }
   main .input {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    gap: 4.5rem;
+    gap: 5rem;
   }
   main .input .tip__btn-container {
     -ms-grid-columns: 1fr 1fr 1fr;
@@ -294,7 +303,7 @@ footer a {
   main .output {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    margin: -1.5rem -1.5rem -1.5rem -0.5rem;
+    margin: -1.5rem -1.5rem -1.5rem 0;
     padding: 4rem;
     display: -webkit-box;
     display: -ms-flexbox;

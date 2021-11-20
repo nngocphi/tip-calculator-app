@@ -60,10 +60,10 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 1.5rem 0 2rem;
+	margin: 1.5rem 0 2.5rem;
 }
 
-%output__label {
+%output__title-container {
 	display: flex;
 	flex-direction: column;
 }
@@ -74,15 +74,15 @@
 	color: $lighter-grayish-cyan;
 }
 
-%output__subtitle {
-	margin-top: 0.3rem;
+%output__desc {
+	// margin-top: 0.3rem;
 	font-size: 1.3rem;
 	font-weight: 700;
 	color: $dark-grayish-cyan;
 }
 
 %output__value {
-	font-size: 3.2rem;
+	font-size: 3rem;
 	font-weight: 700;
 	color: $strong-cyan;
 }
